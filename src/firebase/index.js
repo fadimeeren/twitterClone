@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrTTtoo7aARAoh0LPDAu4aEMe5MvaT4as",
@@ -18,3 +20,6 @@ export const auth = getAuth(app);
 
 // google sağlayıcısının kurulumunu yap
 export const provider = new GoogleAuthProvider();
+
+// firestore referansını al
+export const db = getFirestore(app);
